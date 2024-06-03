@@ -27,7 +27,8 @@ namespace GestiondeEventos.Controllers
         public UsersController(AppDbContext context, IConfiguration config)
         {
             _context = context;
-            clave = config.GetValue<string>("ApiSettings:Secreta");
+            clave = Environment.GetEnvironmentVariable("KEY_SECRET");
+                //config.GetValue<string>("ApiSettings:Secreta");
         }
 
         // GET: api/Users

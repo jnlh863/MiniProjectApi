@@ -1,11 +1,15 @@
 using Microsoft.EntityFrameworkCore;
 using GestiondeEventos.Context;
 using System.Text.Json.Serialization;
+using DotNetEnv;
+
+Env.Load();
 
 var builder = WebApplication.CreateBuilder(args);
 
-
-var connectionString = builder.Configuration.GetConnectionString("ConnectionDB");
+var connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
+    
+    //builder.Configuration.GetConnectionString("ConnectionDB");
 
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
 

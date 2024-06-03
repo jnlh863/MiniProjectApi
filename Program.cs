@@ -5,7 +5,7 @@ using System.Text.Json.Serialization;
 var builder = WebApplication.CreateBuilder(args);
 
 
-var connectionString = builder.Configuration.GetConnectionString("SQLCONNSTR_ConnectionDB");
+var connectionString = builder.Configuration.GetConnectionString("ConnectionDB");
 
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
 

@@ -5,7 +5,7 @@ using DotNetEnv;
 
 var builder = WebApplication.CreateBuilder(args);
 
-Env.Load();
+//Env.Load();
 
 var connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
     

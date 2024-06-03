@@ -54,4 +54,4 @@ jobs:
           app-name: 'eventmanager8'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_45C0A882A23243F18A30A2EB75F47BD2 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0F8110A044CA4E6CAE411A56367E9058 }}
